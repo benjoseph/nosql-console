@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+	<h:head>
+		<link type="text/css" rel="stylesheet" href="./css/default.css" />
+	</h:head>
+	<h:body>
+		<h:form>
+			<p:dataTable var="device" value="#{dtBasicView.devices}">
+				<p:column headerText="Device UDID">
+					<h:outputText value="#{device.udid}" />
+				</p:column>
+
+				<p:column headerText="Friendly name">
+					<h:outputText value="#{device.friendlyName}" />
+				</p:column>
+
+				<p:column headerText="Serial Number">
+					<h:outputText value="#{device.serialnum}" />
+				</p:column>
+
+				<p:column headerText="Mnufacturing Date">
+					<h:outputText value="#{device.manDate}" />
+				</p:column>
+			</p:dataTable>
+		</h:form>
+	</h:body>
+</f:view>
+
+</html>
